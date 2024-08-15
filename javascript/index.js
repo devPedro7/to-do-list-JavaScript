@@ -4,7 +4,8 @@ let inputElement = document.querySelector('#app input')
 let buttonElement = document.querySelector('#app button')
 
 //LISTA PARA ARMAZENAR AS TAREFAS
-let tarefas = []
+let tarefas = JSON.parse(localStorage.getItem('@listaTarefas')) || [];//TODA VEZ QUE ELE INICAR, VAI VERIFICAR SE JÁ TEM DADOS
+                                                            
 
 
 function adicionarTarefa(){
@@ -19,10 +20,10 @@ function adicionarTarefa(){
 
         inputElement.value = ''; //ZERANDO O INPUT DEPOIS QUE ELE REGISTRAR UMA TAREFA.
         listarTarefas();
-        
+        salvarDados();
+
         console.log(tarefas);
     }
-
 }
 function listarTarefas(){
     listElement.innerHTML = '';
@@ -55,9 +56,17 @@ function listarTarefas(){
     })
 }
 
+
+listarTarefas(); //TODA VEZ QUE A APLICAÇÃO FOR ABERTA ELE IRÁ RENDERIZAR AS TAREFAS.
+
 function excluirTarefa(posicaoTarefa){
    tarefas.splice(posicaoTarefa, 1);
    listarTarefas();
+   salvarDados();
    console.log(tarefas);
 }
 
+//ESSA FUNCÇÃO DEVE SER CHAMADA SEMPRE QUANDO FOR SALVAR MA TAREFA E EXCLUIR TAMBÉM.
+function salvarDados(){
+    localStorage.setItem('@listaTarefas', JSON.stringify(tarefas))   
+}
