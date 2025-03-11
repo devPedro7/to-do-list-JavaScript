@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+h2{
+    margin-top: 1%;
+    text-align: center;
+    font-weight: 600;
+}
+
+.container{
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+}
+
+.container input{
+    width: 50%;
+    height: 2rem;
+    padding: 8px;
+    border: 0;
+    border-bottom: 1px solid black;
+}
+
+.container input:focus{
+    outline: none; /*TIRA O FOCO DO INPUT*/
+}
+
+.container button{
+    margin-left: 8px;
+    width: 10rem;
+    cursor: pointer;
+    background-color: #0056fb;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.container button:hover{
+    background-color: #0058fbb1;
+}
+
+.listaCon{
+    padding: 16px;
+    width: 70%;
+    display: flex;
+    margin-top: 3%;
+    flex-wrap: wrap;
+    gap: 2rem;
+    background-color: red;
+}
+
+.lista{
+
+}

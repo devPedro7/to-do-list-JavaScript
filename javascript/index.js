@@ -1,5 +1,5 @@
 //VARIAVEIS PARA ACESSAR OS DADOS DA NOSSA DIV
-let listElement = document.querySelector('#app ul') //=> ELE VAI ACESSAR A DIV E A UL.
+let listElement = document.querySelector('#listaContainer ul') //=> ELE VAI ACESSAR A DIV E A UL.
 let inputElement = document.querySelector('#app input')
 let buttonElement = document.querySelector('#app button')
 
